@@ -1,0 +1,1314 @@
+:root {
+  --primary-color: #ffc72b;
+  --secondary-color: #ff0058;
+  --text-color: #000;
+  --white-color: #fff;
+  --gradiantbg-color: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 242, 206, 1) 100%
+  );
+  --mainbg-color: #fbfaf5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "Montserrat", sans-serif;
+}
+
+.home-section {
+  background: var(--gradiantbg-color);
+  padding: 80px 0px 70px 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.home-title {
+  font-size: 68px;
+  font-weight: 700;
+}
+
+.border-curvy {
+  width: 480px;
+  margin: 30px 0px;
+}
+
+.home-discription {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.home-info-card {
+  padding: 0px 60px 0px 0px;
+}
+
+.trail-button {
+  background-color: var(--secondary-color);
+  padding: 10px 15px;
+  font-size: 16;
+  font-weight: 500;
+  color: var(--white-color);
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.7s;
+}
+
+.trail-button:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.home-action-btns {
+  display: flex;
+  margin-top: 50px;
+}
+
+.play-icon {
+  font-size: 30px;
+}
+
+.demo-btn {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-left: 30px;
+  color: var(--text-color);
+  transition: color 0.5s ease;
+}
+
+.demo-btn:hover {
+  color: var(--primary-color);
+}
+
+.demo-play {
+  font-size: 18;
+  font-weight: 500;
+  margin: 0px 10px;
+}
+
+.home-banner {
+  max-width: 100%;
+}
+
+.bannerCard {
+  padding: 0px 0px 0px 60px;
+}
+
+.bannerCard .home-banner {
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
+}
+
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/* <----------- Login CSS Start Here --------->  */
+
+.login-section {
+  background-color: #fffbf1;
+  width: 100%;
+  height: 100%;
+}
+
+.login-banner {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.login-main {
+  padding: 50px 100px;
+}
+
+.logo {
+  width: 41px;
+  height: 43px;
+}
+
+.companyName {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0px 8px;
+}
+
+.logo-card {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.login-card {
+  margin: 50px 0px;
+}
+
+.welcome-login {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0px;
+}
+
+.loginInfo {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.welcomeuser-card {
+  margin-bottom: 30px;
+}
+
+.password-input-container {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  font-size: 15px;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+.login-labels {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.login-inputs {
+  font-size: 12px !important;
+  padding: 8px !important;
+}
+
+.manageRow {
+  --bs-gutter-x: 0px !important;
+}
+
+.forgot-password {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.forgot-card {
+  display: flex;
+  justify-content: end;
+}
+
+.signin-btn {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-decoration: none;
+  border: 1px solid var(--secondary-color);
+  padding: 10px 50px;
+  border-radius: 8px;
+  transition: 0.7s;
+}
+
+.signin-btn:hover {
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+}
+
+.custom-checkbox .form-check-input:checked {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.check-text {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0px 0px 0px 10px;
+}
+
+.terms-check {
+  color: var(--secondary-color);
+}
+
+.checkbox-card {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.no-account {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.register-text {
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.register-card {
+  margin-top: 120px;
+}
+
+/* ------------- profile choose------------------  */
+
+.profile-choose-sec {
+  padding: 30px 0px;
+  background: var(--gradiantbg-color);
+}
+
+.choose-profile-heading {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0px;
+}
+
+.choose-profile-subheading {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.choose-profile-card {
+  margin: 50px 0px;
+}
+
+.Enterprise-icon {
+  width: 46px;
+  height: 38px;
+}
+
+.category-cards {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  height: 100px;
+  border: 1px solid #3535354d;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.category-cards.selected {
+  border: 1px solid var(--primary-color);
+  background: linear-gradient(
+    90deg,
+    hsla(44, 100%, 73%, 1) 0%,
+    hsla(44, 100%, 95%, 1) 100%
+  );
+}
+
+.here-text {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+.category-types {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0px;
+}
+
+.category-types-card {
+  margin-left: 15px;
+  flex: 1;
+}
+
+.circle-choose {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.Pickup-icon {
+  width: 37px;
+  height: 40px;
+}
+
+.Deliveryboy-icon {
+  width: 33px;
+  height: 50px;
+}
+
+.circle-choose {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.circle-choose.selected {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.selected-check {
+  color: var(--white-color);
+  font-size: 15px;
+  padding: 0px 0px 3px 2px;
+}
+
+.choose-continue-btn {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 10px 50px;
+  text-align: center;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.7s;
+}
+
+.choose-continue-btn:hover {
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+}
+
+.choose-continue-card {
+  margin: 50px 0px;
+}
+
+.account-login {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.login-go-btn {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: 0.7s;
+}
+
+.profile-choose-bannerCard {
+  padding: 100px 0px 0px 60px;
+}
+
+.choose-banner {
+  max-width: 100%;
+}
+
+.choose-main-card {
+  padding-right: 80px;
+}
+
+.profile-choose-bannerCard .choose-banner {
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
+}
+
+.login-go-btn:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* ---------- Pickup CSS Start Here ---------  */
+
+.pickupSignup-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #2c303336;
+  position: relative;
+}
+
+.signup-user-name {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  font-family: "Montserrat", sans-serif;
+}
+
+.pickup-signupFields-icons {
+  font-size: 15px;
+  color: var(--text-color);
+}
+
+.signupPassword-eye-icon {
+  position: absolute;
+  font-size: 15px;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.pickup-signup-flags {
+  width: 26px;
+  height: 26px;
+}
+
+.select-numberByCountry {
+  font-size: 12px !important;
+  width: 25% !important;
+  border: none !important;
+  border-right: 1px solid #ccc !important;
+  padding: 0px !important;
+  outline: none !important;
+  box-shadow: none !important;
+  font-family: "Montserrat", sans-serif;
+}
+
+.pickup-singup-countrySelect {
+  border: 1px solid #ccc;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  font-family: "Montserrat", sans-serif;
+}
+
+.pickup-singup-accountType {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.pickup-signup-typeOfAc {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.acNames-type {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0px 0px 0px 10px;
+}
+
+.pickup-signup-AcCircle {
+  position: relative;
+  width: 20px; /* Adjust circle size as needed */
+  height: 20px; /* Adjust circle size as needed */
+  border-radius: 50%;
+  border: 1px solid #ccc; /* Border style */
+  margin-left: auto;
+}
+
+.selected-check {
+  color: var(--white-color); /* Color of the check icon */
+  font-size: 12px; /* Adjust size as needed */
+  padding: 0px 0px 5px 4px;
+}
+
+.pickup-signup-AcCircle.selected {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.pickup-signup-typeOfAc.selected {
+  border: 1px solid var(--primary-color);
+  background: linear-gradient(
+    90deg,
+    hsla(44, 100%, 73%, 1) 0%,
+    hsla(44, 100%, 95%, 1) 100%
+  );
+}
+
+.pickup-signup-continueBtn {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 10px 50px;
+  text-align: center;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.7s;
+  border: none;
+  margin: 90px 0px 40px 0px;
+}
+
+.pickup-signup-continueBtn:hover {
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+}
+
+.pickup-signup-acLogin-text {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.login-text-signup {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: 0.7s;
+  font-weight: 700;
+}
+
+.login-text-signup:hover {
+  color: var(--secondary-color);
+}
+
+.pickup-signup-form-main-card {
+  padding-right: 100px;
+}
+
+/* ------------- Pickup Home CSS Start Here -----------  */
+
+.home-map-container-card {
+  width: 100%;
+  height: 100vh;
+}
+
+.pickup-request-text {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.pickupHome-InfoBtnIcon {
+  border: none;
+  background: transparent;
+  right: 0%;
+  position: absolute;
+  top: -6%;
+  padding: 0px;
+}
+
+.request-pickup-maincard {
+  padding: 25px 25px;
+}
+
+.request-pickup-sec {
+  background-color: var(--mainbg-color);
+}
+
+.homeMap-placeSearch {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  width: 100%;
+}
+
+.home-pickupDrop-address-cards {
+  padding: 20px 15px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.pickupAddres-autocompleteCard {
+  display: flex;
+  align-items: center;
+}
+
+.pickupHome-location-icon {
+  font-size: 15px;
+  padding-right: 10px;
+}
+
+.homePickup-locations-border-showoff {
+  border: 1px dashed #dbdbdb;
+  margin: 12px 0px;
+}
+
+.dropHome-location-icon {
+  font-size: 15px;
+  padding-right: 7px;
+}
+
+.homepickup-scheduleRequest-cardMain {
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 6px;
+}
+
+.pickupHome-scheduleselect-card {
+  display: flex;
+  align-self: center;
+}
+
+.pickupHome-whenNeedText {
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+.pickupHome-calender-icon {
+  font-size: 15px;
+}
+
+.pickupHome-nowText {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 0px;
+  margin-left: auto;
+}
+
+.homePickup-Bicycle {
+  width: 50px;
+  height: 59px;
+}
+
+.homePickup-vehicles-card {
+  border: 1px solid #2c303336;
+  height: 85px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  position: relative;
+}
+
+.homePickup-info {
+  width: 20px;
+  height: 20px;
+}
+
+.homePickupVehicleCard-main {
+  margin: 10px 0px;
+}
+
+.pickupHome-vehicleTypeByName {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.pickupHome-vehicleCap {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.pickupHome-vehicleTypeCap {
+  margin: 5px 0px 10px;
+}
+
+.Pickup-Bicycle {
+  width: 50px;
+  height: 59px;
+}
+
+.Pickup-Scooter {
+  width: 50px;
+  height: 57px;
+}
+
+.Pickup-Van {
+  width: 75px;
+  height: 47px;
+}
+
+.Pickup-Pickup {
+  width: 74px;
+  height: 63px;
+}
+
+.Pickup-Truck {
+  width: 75px;
+  height: 47px;
+}
+
+.Pickup-Package {
+  width: 47px;
+  height: 47px;
+}
+
+.goTo-orderDetails {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  background-color: var(--primary-color);
+}
+
+.pickuphome-continueBt {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+/* --------------- DateTimePicker ------------  */
+
+.homepickup-chooseTimeText {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 10px 0px 0px;
+}
+
+/* -------------- add pickup details Page ----------  */
+
+.addPickupDetails-Sec {
+  background-color: var(--mainbg-color);
+  padding: 20px 0px;
+}
+
+.addPickupDetailsText {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 15px 0px 0px;
+}
+
+.addPickupDetails-Subtext {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.pickup-personalDetails {
+  font-size: 12px;
+  font-weight: 400;
+  border-bottom: 1px dashed #d8d6d6;
+  padding-bottom: 5px;
+}
+
+.addPickup-detailForm-Labels {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 3px !important;
+}
+
+.addPickupDetails-inputs {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px !important;
+}
+
+.addPickup-uploadPhoto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #d8d8d8;
+  border-radius: 8px;
+  padding: 50px 0px;
+  background-color: var(--white-color);
+}
+
+.addPickup-dragText {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0px 0px 0px 8px;
+}
+
+.addPickup-detailsCancelBTn {
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
+  padding: 10px 70px;
+  background-color: transparent;
+  transition: 0.7s;
+}
+
+.addPickup-detailsCancelBTn:hover {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.addPickupDetails-NextBtn {
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  padding: 10px 80px;
+  transition: 0.7s;
+}
+
+.addPickupDetails-NextBtn:hover {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.addPickup-detailsBtnCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0px 20px;
+}
+
+.addPickup-DetailsBackArrow {
+  color: var(--text-color);
+}
+
+/* ----------- Pickup Order Preview Start Here ----------  */
+
+.pickupOrder-PreviewAddresCard {
+  padding: 20px 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.pickupOrderPreview-PickupAddressCard {
+  display: flex;
+}
+
+.pickuporderPreview-PickupAddressText {
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+.pickupOrderPreview-LocationIcon {
+  font-size: 14px;
+}
+
+.PickupOrderPreview-BorderShowOff {
+  border: 1px dashed #dbdbdb;
+  margin: 12px 0px;
+}
+
+.pickupOrderPreview-VehicleCard {
+  padding: 15px 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.pickupOrderPreview-vehicleDetailsText {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.PickupOrderPreview-TruckImage {
+  width: 108px;
+  height: 62px;
+}
+
+.pickupOrderPreview-VehicleDetailsCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pickupOrderPreview-VehicleType {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0px;
+}
+
+.pickupOrderPreview-companyName {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+.pickupOrderPreview-adminDetailsCard {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.pickupOrder-adminEmail {
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 5px;
+  margin-bottom: 0px;
+}
+
+.pickupOrderglobeIcon {
+  font-size: 12px;
+}
+
+.pickupOrderPreview-AdminDetailsMainCard {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.pickupOrderPreview-PickupNotes {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+.PickupOrderEuroText-big {
+  font-size: 34px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin: 0px;
+}
+
+.pickupOrderPreview-NormalDetails {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.pickupOrderNormal-detailsCard {
+  display: flex;
+  align-items: center;
+}
+
+.pickupPreviewB {
+  padding: 0px 5px;
+  margin: 0px 5px;
+  border-left: 1px solid var(--text-color);
+  border-right: 1px solid var(--text-color);
+}
+
+.saveAddresslater-CheckBox .form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.promoCodeCard-Payments {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  background-color: var(--white-color);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 8px;
+}
+
+.promoCode-InputPayment {
+  border: none !important;
+  padding: 0px !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.paymentPromoCodeIcon {
+  color: var(--secondary-color);
+  margin-right: 10px;
+}
+
+.paymentApplyCouponBtn {
+  border: none;
+  color: var(--white-color);
+  border-radius: 0px 8px 8px 0px;
+  background-color: var(--secondary-color);
+  padding: 10px 25px;
+  transition: 0.7s;
+}
+
+.paymentApplyCouponBtn:hover {
+  background-color: var(--primary-color);
+}
+
+.paymentDebitCreditCardsText {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 15px 0px;
+}
+
+.paymentsOff-CreaditCardInfo {
+  display: flex;
+  align-items: center;
+  background-color: #ff00580f;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+
+.paymentCreditCardOfferText {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--secondary-color);
+  margin: 0px;
+}
+
+.paymentsCards-infoCircle {
+  font-size: 13px;
+  color: var(--secondary-color);
+  margin-right: 8px;
+}
+
+.paymentInvoive-TruckIcon {
+  width: 126px;
+  height: 72px;
+}
+
+.paymentInvoiceCardMain {
+  padding: 15px 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: var(--white-color);
+  border-radius: 10px;
+}
+
+.paymentInvoiceTruckImageCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.paymentOrderSummaryText {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 8px 0px;
+}
+
+.paymentInvoice-detailsText {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0px;
+}
+
+.payment-addressDetailText {
+  font-size: 11px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.paymentMainDetailsText {
+  font-size: 11px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+.paymentTotalAmount-Card {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0px 0px;
+}
+
+.payment-TotalAmounttext {
+  font-size: 11px;
+  font-weight: 700;
+  margin: 0px;
+}
+
+/* ---------------- Looking for Driver Start Here ------------  */
+
+.lookingDriver-Section {
+  background-image: url("../images/Looking-Background.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.driver-background-middle-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+}
+
+.backgroundDriverCircle {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  z-index: 1;
+}
+
+.backgroundDriverCircle-Profiles {
+  width: 420px;
+  height: 215px;
+}
+
+.DriverProfile-CardMainBg {
+  text-align: center;
+  position: absolute;
+  z-index: 9;
+}
+
+.lookingDriverText {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.lookingDriverSubText {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.driverCancelCard {
+  text-align: end;
+  margin-top: 30px;
+}
+
+.driverCancelModalBtn {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  padding: 8px 15px;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+/* ----------- Pickup Account Section -----------  */
+
+.pickupAccount-Sec {
+  padding: 20px 0px;
+}
+
+.pickupAccount-UserProfile {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.pickupAccount-HeaderUserName {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0px;
+}
+
+.pickupAccount-HeaderUserEmail {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.pickupAccount-UserHeaderCard {
+  display: flex;
+  align-items: center;
+  padding: 20px 25px;
+  background: linear-gradient(
+    269.99deg,
+    rgba(255, 199, 43, 0.1) 25.29%,
+    rgba(255, 199, 43, 0.44) 99.99%
+  );
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.pickupAccount-sidebarNav{
+  padding: 15px; 
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: var(--white-color);
+  border-radius: 8px;
+}
+
+.pickupAccount-sideNavBtns{
+  padding: 8px 20px 10px;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  margin: 10px 0px;
+  transition: 0.7s;
+}
+
+.pickupAccount-NavLinkText{
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.pickupAccount-sideNavBtns:hover{
+  background-color: #FFF7DF;
+}
+
+/* ------------- Address Book Start Here --------------  */
+
+.addressBook-MainSec{
+  padding: 15px; 
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: var(--white-color);
+  border-radius: 8px;
+}
+
+.addressBook-headerTitleText{
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0px;
+}
+
+.addressBook-plusIconBtn{
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  padding: 0px;
+}
+
+.addressBook-addressCard{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dbdbdb;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.addressBook-AddressesCards{
+  display: flex;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin: 10px 0px;
+}
+
+.addressBook-UserCompanyname{
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0px;
+}
+
+.addressBook-userCompanyAddress{
+  font-size: 10px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.addressBook-EditPenIconCard{
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  padding: 0px;
+}
+
+.addressBook-LocationDotIconCard{
+  margin-right: 15px;
+}
+
+/* ---------------- Pickup Notification Settings -----------  */
+
+.pickupPushNotification-enableCard{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.push-notifications-switch .form-check-input:checked {
+  background-color: yellow !important;
+  border-color: yellow !important;
+}
+
+.promotional-email-switch .form-check-input:checked {
+  background-color: yellow !important;
+  border-color: yellow !important;
+}
+
+.pickupPush-NotificationSettings{
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0px;
+}

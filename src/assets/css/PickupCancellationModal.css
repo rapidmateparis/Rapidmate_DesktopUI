@@ -1,0 +1,159 @@
+:root {
+    --primary-color: #ffc72b;
+    --secondary-color: #ff0058;
+    --text-color: #000;
+    --white-color: #fff;
+    --gradiantbg-color: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 242, 206, 1) 100%
+    );
+    --mainbg-color: #fbfaf5;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .modal-header{
+    padding: 0px !important;
+    display: block !important;
+  }
+
+  .modalCancellation-header{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: #fffcea;
+    border-radius: 15px 15px 0px 0px;
+    align-items: center;
+  }
+
+  .cancellation-reasonText{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px 100px 0px 0px;
+  }
+
+  .orderCanceledTextHead{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px 110px 0px 0px;
+  }
+
+  .modalClose-HeaderBtn{
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  .modal-content{
+    border-radius: 15px !important;
+  }
+
+  .cancellationModal-reasonCircle {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 20px; /* Ensure the check mark icon centers vertically */
+  }
+  
+  .cancellationReasonCard.selected .cancellationModal-reasonCircle {
+    background-color: var(--primary-color); 
+    color: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .reasonCancellation-CheckIcon{
+    font-size: 12px;
+  }
+
+  .cancellationReasonCard{
+    display: flex;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .cancellationReason-TextDetails{
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0px;
+  }
+
+  .cancellationModal-SubmitBtn{
+    font-size: 14px;
+    font-weight: 500;
+    border: 0px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 10px 55px;
+    margin-top: 30px;
+  }
+
+  .orderCanceled-SadEmoji{
+    width: 55px;
+    height: 53px;
+    margin: 20px 0px 30px;
+  }
+
+  .yourOrderCancelText{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .orderCanceledMsg{
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .orderCanceledMainCard{
+    text-align: center;
+  }
+
+  /* ------------ Vehcle Dimensions ------------  */
+
+  .vehicleDimensions-TextHead{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px 100px 0px 0px;
+  }
+
+  .vehicleDimensions-Counts{
+    font-size: 12px;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    padding: 1px 2px 2px 7px;
+    margin-right: 8px;
+    margin-bottom: 0px;
+  }
+
+  .vehicleDimensions-Length{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0px;
+  }
+
+  .vehicleDimensions-countCard{
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+  }

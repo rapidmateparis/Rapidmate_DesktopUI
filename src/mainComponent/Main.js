@@ -1,4 +1,5 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Login from '../register/Login';
 import ProfileChoose from '../register/ProfileChoose';
@@ -12,9 +13,18 @@ import PickupAccount from '../components/pickupAndDropOff/PickupSettings/PickupA
 
 const Main = () => {
   return (
-    <div>
-        <PickupAccount/>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/profile-choose" element={<ProfileChoose />} />
+      <Route path="/pickup-signup" element={<PickupSignup />} />
+      <Route path="/pickup-home" element={<PickupHome />} />
+      <Route path="/add-pickup-details" element={<AddPickupDetails />} />
+      <Route path="/pickup-order-preview" element={<PickupOrderPreview />} />
+      <Route path="/pickup-payment" element={<PickupPayment />} />
+      <Route path="/pickup-looking-for-driver" element={<PickupLookingForDriver />} />
+      <Route path="/pickup-account" element={<PickupAccount />} />
+    </Routes>
   )
 }
 

@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import ForgotPasswordEmailModal from './ForgotPasswordEmailModal';
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -84,9 +85,9 @@ const Login = () => {
                   </div>
                 </div>
                 <div>
-                  <a className="signin-btn" href="#">
+                  <Link className="signin-btn" to='/profile-choose'>
                     Sign in
-                  </a>
+                  </Link>
                   <div>
                     <Form>
                       {checkboxTypes.map((type) => (

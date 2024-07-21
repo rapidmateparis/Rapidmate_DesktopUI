@@ -4,6 +4,7 @@ import CurvyBorder from "../assets/images/curvy-border.png";
 import HomeBanner from "../assets/images/home-banner.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -25,9 +26,9 @@ const Home = () => {
                   moving needs.
                 </p>
                 <div className="home-action-btns">
-                  <a className="trail-button" href="#">
+                  <Link className="trail-button" to="/login">
                     Try free trial
-                  </a>
+                  </Link>
                   <a className="demo-btn" href="#">
                     <FontAwesomeIcon
                       className="play-icon"

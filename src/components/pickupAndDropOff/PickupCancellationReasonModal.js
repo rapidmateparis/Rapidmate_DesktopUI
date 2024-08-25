@@ -4,9 +4,21 @@ import Modal from "react-bootstrap/Modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faCheck } from "@fortawesome/free-solid-svg-icons";
 import "../../assets/css/PickupCancellationModal.css";
+import PickupOrderCancelled from '../pickupAndDropOff/PickupOrderCancelled'
 
 function PickupCancellationReasonModal({ show, handleClose }) {
   const [selectedReason, setSelectedReason] = useState("");
+  const [showOrderCancelModal, setOrderCancelModal] = useState(false); // State to manage ResetPasswordModal visibility
+
+  const handleShowOrderCancelModal = () => setOrderCancelModal(true);
+  const handleCloseCancelModal = () => setOrderCancelModal(false);
+
+  const handleReasonSubmit = () => {
+    // Handle email submission logic here
+    // For demo purposes, let's just open the ResetPasswordModal and close the current modal
+    handleShowOrderCancelModal();
+    handleClose();
+  };
 
   const handleReasonSelect = (reason) => {
     setSelectedReason(reason);
@@ -79,10 +91,17 @@ function PickupCancellationReasonModal({ show, handleClose }) {
         </Modal.Body>
         <Modal.Footer>
            <div>
-              <button className="cancellationModal-SubmitBtn">Submit</button>
+              <button onClick={handleReasonSubmit} className="cancellationModal-SubmitBtn">Submit</button>
            </div>
         </Modal.Footer>
       </Modal>
+      {/* Render OtpModal conditionally based on showOtpModal state */}
+      {showOrderCancelModal && (
+        <PickupOrderCancelled
+          show={showOrderCancelModal}
+          handleClose={handleCloseCancelModal}
+        />
+      )}
     </>
   );
 }

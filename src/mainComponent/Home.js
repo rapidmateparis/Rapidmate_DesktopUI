@@ -1,53 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/css/home.css";
-import CurvyBorder from "../assets/images/curvy-border.png";
-import HomeBanner from "../assets/images/home-banner.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
-import { Link } from "react-router-dom";
+import HomeHeader from "./HomeHeader";
+import LogoSlider from "./LogoSlider";
+import Faq from "./Faq";
+import HomeBlog from "./HomeBlog";
+import WhyChooseus from "./WhyChooseus";
+import Services from "./Services";
+import ServicesTypesCard from "./ServicesTypesCard";
+import CompanyAchivments from "./CompanyAchivments";
+import HomeBannerCard from "./HomeBannerCard";
+import DownloadMobileApp from "./DownloadMobileApp";
+import HomeContact from "./HomeContact";
+import HomeFooter from "./HomeFooter";
+import HomeAboutus from "./HomeAboutus";
+import HomeTestimonial from "./HomeTestimonial";
+
 
 const Home = () => {
+  
   return (
     <>
-      <section className="home-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <div className="home-info-card">
-                <h1 className="home-title">
-                  Your delivery & moving partner, in one tap
-                </h1>
-                <img className="border-curvy" src={CurvyBorder} alt="border" />
-                <p className="home-discription">
-                  Are you tired of the hassle and stress of ordering food,
-                  requesting couriers, or moving to a new home? Look no further
-                  than Rapidmate! Our app is designed to make your life easier
-                  by providing a one-stop solution for all your delivery and
-                  moving needs.
-                </p>
-                <div className="home-action-btns">
-                  <Link className="trail-button" to="/login">
-                    Try free trial
-                  </Link>
-                  <a className="demo-btn" href="#">
-                    <FontAwesomeIcon
-                      className="play-icon"
-                      icon={faCirclePlay}
-                    />
-                    <p className="demo-play">View Demo</p>
-                  </a>
-                </div>
-              </div>
-            </div>
+      {/* Header Start Here  */}
+      <HomeHeader />
+      {/* Header End Here  */}
 
-            <div className="col-md-6">
-              <div className="bannerCard">
-                <img className="home-banner" src={HomeBanner} alt="banner" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Main Home Banner Section start here  */}
+      <HomeBannerCard />
+
+      {/* Home Cards Section start here  */}
+      <ServicesTypesCard />
+
+      {/* About us section start here  */}
+      <HomeAboutus />
+
+      {/* Home Companies trust us Section start here  */}
+      <CompanyAchivments />
+
+      {/* Our services Start here  */}
+      <Services />
+
+      {/* Why choose us section start here  */}
+      <WhyChooseus />
+
+      {/* Testimonial Start Here  */}
+      <HomeTestimonial/>
+
+      {/* Latest Blog Section Start here  */}
+      <HomeBlog />
+
+      {/* FAQs Section Start Here  */}
+      <Faq />
+
+      {/* Contact Form Section Start Here  */}
+      <HomeContact />
+
+      {/* Download Moblie App Section Start Here  */}
+      <DownloadMobileApp />
+
+      {/* Logo Slider Start Here  */}
+      <LogoSlider />
+
+      {/* Footer Section start here  */}
+      <HomeFooter />
     </>
   );
 };

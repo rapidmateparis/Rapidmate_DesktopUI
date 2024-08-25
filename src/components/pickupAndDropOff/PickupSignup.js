@@ -12,7 +12,8 @@ import {
 import "../../assets/css/home.css";
 import Logo from "../../assets/images/Logo-icon.png";
 import Flag from "../../assets/images/numberFlag.png";
-import HomeBanner from "../../assets/images/home-banner.png";
+import SignupBanner from "../../assets/images/Pickup-Signup-Banner.png";
+import { Link } from "react-router-dom";
 
 const PickupSignup = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -222,14 +223,14 @@ const PickupSignup = () => {
                     </div>
                   </Form>
                   <div>
-                    <button className="pickup-signup-continueBtn" type="button">
+                    <Link to="/pickup-home" className="pickup-signup-continueBtn" type="button">
                       Continue
-                    </button>
+                    </Link>
                     <p className="pickup-signup-acLogin-text">
                       Already have an account?{" "}
-                      <a className="login-text-signup" href="#">
+                      <Link to="/login" className="login-text-signup" href="#">
                         Login
-                      </a>
+                      </Link>
                     </p>
                     <p className="pickup-signup-acLogin-text">
                       By signing up you agree to{" "}
@@ -248,7 +249,7 @@ const PickupSignup = () => {
             </div>
             <div className="col-md-4">
               <div className="profile-choose-bannerCard">
-                <img className="choose-banner" src={HomeBanner} alt="banner" />
+                <img className="PickupSignup-banner" src={SignupBanner} alt="banner" />
               </div>
             </div>
           </div>

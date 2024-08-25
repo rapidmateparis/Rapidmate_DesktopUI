@@ -10,21 +10,33 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import Truck from "../../assets/images/Truck.png";
+import { Link } from "react-router-dom";
+import PickupHeader from "./PickupSettings/PickupHeader";
+import SidebarImg from "../../assets/images/Pickup-Order-preview-Banner.png";
 
 const PickupOrderPreview = () => {
   const checkboxTypes = ["checkbox"];
 
   return (
     <>
+      {/* Header Start Here  */}
+      <PickupHeader />
+      {/* Header End Here  */}
       <section className="addPickupDetails-Sec">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <div>
+        <div>
+          <div className="row manageRow">
+            <div className="col-md-4">
+              <div className="addpickupDetail-SidecardMain">
+                <img
+                  className="addpickupDetail-SidecardboxIcon"
+                  src={SidebarImg}
+                  alt="icon"
+                />
+              </div>
+            </div>
+            <div className="col-md-8">
+              <div className="pickupOrderPreview-MainCard">
                 <div>
-                  <a className="addPickup-DetailsBackArrow" href="#">
-                    <FontAwesomeIcon icon={faArrowLeft} />
-                  </a>
                   <h2 className="addPickupDetailsText">Order preview</h2>
                   <p className="addPickupDetails-Subtext">
                     Let’s review your order details. if it looks ok please
@@ -147,29 +159,34 @@ const PickupOrderPreview = () => {
                 </div>
 
                 <div>
-                    <Form>
-                      {checkboxTypes.map((type) => (
-                        <div
-                          key={`default-${type}`}
-                          className="mb-3 checkbox-card"
-                        >
-                          <Form.Check
-                            type={type}
-                            id={`default-${type}`}
-                            label={null}
-                            className="saveAddresslater-CheckBox"
-                          />
-                          <p className="check-text">Save these addresses for later</p>
-                        </div>
-                      ))}
-                    </Form>
-                  </div>
+                  <Form>
+                    {checkboxTypes.map((type) => (
+                      <div
+                        key={`default-${type}`}
+                        className="mb-3 checkbox-card"
+                      >
+                        <Form.Check
+                          type={type}
+                          id={`default-${type}`}
+                          label={null}
+                          className="saveAddresslater-CheckBox"
+                        />
+                        <p className="check-text">
+                          Save these addresses for later
+                        </p>
+                      </div>
+                    ))}
+                  </Form>
+                </div>
 
                 <div className="addPickup-detailsBtnCard">
                   <button className="addPickup-detailsCancelBTn">Cancel</button>
-                  <button className="addPickupDetails-NextBtn">
+                  <Link
+                    to="/pickup-payment"
+                    className="addPickupDetails-NextBtn"
+                  >
                     Proceed to payment
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

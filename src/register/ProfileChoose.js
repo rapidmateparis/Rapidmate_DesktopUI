@@ -1,19 +1,32 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import "../assets/css/home.css";
-import Logo from "../assets/images/Logo-icon.png";
-import Home from "../assets/images/home-icon.png";
-import Pickup from "../assets/images/pickup-icon.png";
-import Deliveryboy from "../assets/images/deliveryboy.png";
-import HomeBanner from "../assets/images/home-banner.png";
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { Link, useNavigate } from 'react-router-dom';
+import '../assets/css/home.css';
+import Logo from '../assets/images/Logo-icon.png';
+import Home from '../assets/images/home-icon.png';
+import Pickup from '../assets/images/pickup-icon.png';
+import Deliveryboy from '../assets/images/deliveryboy.png';
+import HomeBanner from '../assets/images/home-banner.png';
 
 const ProfileChoose = () => {
   const [selectedOption, setSelectedOption] = useState(null);
+  const navigate = useNavigate(); 
 
   const handleCardClick = (option) => {
     setSelectedOption(option);
   };
+
+  const handleContinue = () => {
+    if (selectedOption === 'pickup') {
+      navigate('/pickup-signup');
+    } else if (selectedOption === 'enterprise') {
+      navigate('/enterprises-signup');
+    } else if (selectedOption === 'delivery') {
+      navigate('/deliveryboy-signup');
+    }
+  };
+
   return (
     <>
       <section className="profile-choose-sec">
@@ -38,9 +51,9 @@ const ProfileChoose = () => {
                 <div>
                   <div
                     className={`category-cards ${
-                      selectedOption === "enterprise" ? "selected" : ""
+                      selectedOption === 'enterprise' ? 'selected' : ''
                     }`}
-                    onClick={() => handleCardClick("enterprise")}
+                    onClick={() => handleCardClick('enterprise')}
                   >
                     <img className="Enterprise-icon" src={Home} alt="icon" />
                     <div className="category-types-card">
@@ -49,10 +62,10 @@ const ProfileChoose = () => {
                     </div>
                     <div
                       className={`circle-choose ${
-                        selectedOption === "enterprise" ? "selected" : ""
+                        selectedOption === 'enterprise' ? 'selected' : ''
                       }`}
                     >
-                      {selectedOption === "enterprise" && (
+                      {selectedOption === 'enterprise' && (
                         <FontAwesomeIcon
                           className="selected-check"
                           icon={faCheck}
@@ -63,9 +76,9 @@ const ProfileChoose = () => {
 
                   <div
                     className={`category-cards ${
-                      selectedOption === "pickup" ? "selected" : ""
+                      selectedOption === 'pickup' ? 'selected' : ''
                     }`}
-                    onClick={() => handleCardClick("pickup")}
+                    onClick={() => handleCardClick('pickup')}
                   >
                     <img className="Pickup-icon" src={Pickup} alt="icon" />
                     <div className="category-types-card">
@@ -74,10 +87,10 @@ const ProfileChoose = () => {
                     </div>
                     <div
                       className={`circle-choose ${
-                        selectedOption === "pickup" ? "selected" : ""
+                        selectedOption === 'pickup' ? 'selected' : ''
                       }`}
                     >
-                      {selectedOption === "pickup" && (
+                      {selectedOption === 'pickup' && (
                         <FontAwesomeIcon
                           className="selected-check"
                           icon={faCheck}
@@ -88,9 +101,9 @@ const ProfileChoose = () => {
 
                   <div
                     className={`category-cards ${
-                      selectedOption === "delivery" ? "selected" : ""
+                      selectedOption === 'delivery' ? 'selected' : ''
                     }`}
-                    onClick={() => handleCardClick("delivery")}
+                    onClick={() => handleCardClick('delivery')}
                   >
                     <img
                       className="Deliveryboy-icon"
@@ -103,10 +116,10 @@ const ProfileChoose = () => {
                     </div>
                     <div
                       className={`circle-choose ${
-                        selectedOption === "delivery" ? "selected" : ""
+                        selectedOption === 'delivery' ? 'selected' : ''
                       }`}
                     >
-                      {selectedOption === "delivery" && (
+                      {selectedOption === 'delivery' && (
                         <FontAwesomeIcon
                           className="selected-check"
                           icon={faCheck}
@@ -116,17 +129,20 @@ const ProfileChoose = () => {
                   </div>
 
                   <div className="choose-continue-card">
-                    <a className="choose-continue-btn" href="#">
+                    <button
+                      className="choose-continue-btn"
+                      onClick={handleContinue}
+                    >
                       Continue
-                    </a>
+                    </button>
                   </div>
 
                   <div>
                     <p className="account-login">
-                      Already have an account?{" "}
-                      <a className="login-go-btn" href="#">
+                      Already have an account?{' '}
+                      <Link to="/login" className="login-go-btn">
                         Login
-                      </a>
+                      </Link>
                     </p>
                   </div>
                 </div>

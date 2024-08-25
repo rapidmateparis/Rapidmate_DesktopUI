@@ -23,6 +23,7 @@ const ForgotPasswordEmailModal = ({ show, handleClose }) => {
 
   return (
     <>
+    <div className="forgotPassword-modalMain">
       <Modal
         show={show}
         onHide={handleClose}
@@ -87,6 +88,7 @@ const ForgotPasswordEmailModal = ({ show, handleClose }) => {
           handleClose={handleCloseOtpModal}
         />
       )}
+      </div>
     </>
   );
 };

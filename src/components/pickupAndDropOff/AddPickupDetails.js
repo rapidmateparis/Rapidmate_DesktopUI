@@ -3,17 +3,27 @@ import "../../assets/css/home.css";
 import Form from "react-bootstrap/Form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faPaperclip } from "@fortawesome/free-solid-svg-icons";
+import PickupHeader from "./PickupSettings/PickupHeader";
+import SidebarImg from "../../assets/images/Pickup-Detail-SideImg.png";
+import { Link } from "react-router-dom";
 
 const AddPickupDetails = () => {
   return (
     <>
+      {/* Header Start Here  */}
+      <PickupHeader />
+      {/* Header End Here  */}
       <section className="addPickupDetails-Sec">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <div>
+        <div>
+          <div className="row manageRow">
+            <div className="col-md-4">
+              <div className="addpickupDetail-SidecardMain">
+                <img className="addpickupDetail-SidecardboxIcon" src={SidebarImg} alt="icon" />
+              </div>
+            </div>
+            <div className="col-md-8">
+              <div className="pickupAddpickup-detailsMaincard">
                 <div>
-                <a className="addPickup-DetailsBackArrow" href="#"><FontAwesomeIcon icon={faArrowLeft} /></a>
                   <h2 className="addPickupDetailsText">Add pickup details</h2>
                   <p className="addPickupDetails-Subtext">
                     You have entered pickup and drop-off addresses, time of
@@ -22,10 +32,10 @@ const AddPickupDetails = () => {
                   <p className="pickup-personalDetails">Personal details</p>
                 </div>
                 <Form>
-                  <div className="row">
+                  <div className="row manageRow">
                     <div className="col-md-6">
                       <Form.Group
-                        className="mb-3"
+                        className="mb-1"
                         controlId="exampleForm.ControlInput1"
                       >
                         <Form.Label className="addPickup-detailForm-Labels">
@@ -41,7 +51,7 @@ const AddPickupDetails = () => {
 
                     <div className="col-md-6">
                       <Form.Group
-                        className="mb-3"
+                        className="mb-1"
                         controlId="exampleForm.ControlInput1"
                       >
                         <Form.Label className="addPickup-detailForm-Labels">
@@ -57,7 +67,7 @@ const AddPickupDetails = () => {
 
                     <div className="col-md-12">
                       <Form.Group
-                        className="mb-3"
+                        className="mb-1"
                         controlId="exampleForm.ControlInput1"
                       >
                         <Form.Label className="addPickup-detailForm-Labels">
@@ -73,7 +83,7 @@ const AddPickupDetails = () => {
 
                     <div className="col-md-6">
                       <Form.Group
-                        className="mb-3"
+                        className="mb-1"
                         controlId="exampleForm.ControlInput1"
                       >
                         <Form.Label className="addPickup-detailForm-Labels">
@@ -88,9 +98,9 @@ const AddPickupDetails = () => {
                     </div>
 
                     <div className="col-md-6">
-                      <Form.Group className="mb-3" controlId="formPlaintext">
+                      <Form.Group className="mb-1" controlId="formPlaintext">
                         <Form.Label className="addPickup-detailForm-Labels">
-                        Phone number
+                          Phone number
                         </Form.Label>
                         <div className="pickupSignup-container">
                           <Form.Select
@@ -112,10 +122,10 @@ const AddPickupDetails = () => {
                   </div>
                   <p className="pickup-personalDetails">Package details</p>
 
-                  <div className="row">
+                  <div className="row manageRow">
                     <div className="col-md-12">
                       <Form.Group
-                        className="mb-3"
+                        className="mb-1"
                         controlId="exampleForm.ControlInput1"
                       >
                         <Form.Label className="addPickup-detailForm-Labels">
@@ -124,7 +134,9 @@ const AddPickupDetails = () => {
                         <div>
                           <div className="addPickup-uploadPhoto">
                             <FontAwesomeIcon icon={faPaperclip} />
-                            <p className="addPickup-dragText">Drag or click to attach a photo</p>
+                            <p className="addPickup-dragText">
+                              Drag or click to attach a photo
+                            </p>
                           </div>
                         </div>
                       </Form.Group>
@@ -132,11 +144,11 @@ const AddPickupDetails = () => {
 
                     <div className="col-md-6">
                       <Form.Group
-                        className="mb-3"
+                        className="mb-1"
                         controlId="exampleForm.ControlInput1"
                       >
                         <Form.Label className="addPickup-detailForm-Labels">
-                        Package ID
+                          Package ID
                         </Form.Label>
                         <Form.Control
                           className="addPickupDetails-inputs"
@@ -148,11 +160,11 @@ const AddPickupDetails = () => {
 
                     <div className="col-md-6">
                       <Form.Group
-                        className="mb-3"
+                        className="mb-1"
                         controlId="exampleForm.ControlInput1"
                       >
                         <Form.Label className="addPickup-detailForm-Labels">
-                        Pickup notes
+                          Pickup notes
                         </Form.Label>
                         <Form.Control
                           className="addPickupDetails-inputs"
@@ -165,8 +177,13 @@ const AddPickupDetails = () => {
                 </Form>
 
                 <div className="addPickup-detailsBtnCard">
-                    <button className="addPickup-detailsCancelBTn">Cancel</button>
-                    <button className="addPickupDetails-NextBtn">Next</button>
+                  <button className="addPickup-detailsCancelBTn">Cancel</button>
+                  <Link
+                    to="/pickup-order-preview"
+                    className="addPickupDetails-NextBtn"
+                  >
+                    Next
+                  </Link>
                 </div>
               </div>
             </div>

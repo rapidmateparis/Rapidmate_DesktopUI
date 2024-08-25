@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import { Modal } from "react-bootstrap";
 import styled from "styled-components";
 import Logo from "../assets/images/Logo-icon.png";
-import Form from "react-bootstrap/Form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
@@ -20,21 +19,17 @@ const ForgotPasswordOTPModal = ({ show, handleClose }) => {
   const handleCloseResetPasswordModal = () => setShowResetPasswordModal(false);
 
   const handleOtpSubmit = () => {
-    // Handle email submission logic here
-    // For demo purposes, let's just open the ResetPasswordModal and close the current modal
+    console.log("OTP submitted");
     handleShowResetPasswordModal();
     handleClose();
   };
 
   const handleInputChange = (index, event) => {
     const value = event.target.value;
-    // Ensure only numbers are entered
     if (!isNaN(value) && value.length <= 1) {
       const newOTP = [...otp];
       newOTP[index] = value;
       setOTP(newOTP);
-
-      // Auto focus next input
       if (index < otp.length - 1 && value !== "") {
         inputRefs.current[index + 1].focus();
       }
@@ -45,7 +40,6 @@ const ForgotPasswordOTPModal = ({ show, handleClose }) => {
     event.preventDefault();
     const pasteData = event.clipboardData.getData("Text").trim();
     if (pasteData.length === otp.length) {
-      // Update OTP state with pasted value
       const newOTP = [...otp];
       for (let i = 0; i < pasteData.length; i++) {
         newOTP[i] = pasteData[i];

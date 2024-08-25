@@ -1,17 +1,11 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faCheck } from "@fortawesome/free-solid-svg-icons";
 import SadEmoji from "../../assets/images/SadFace-Emoji.png";
-import "../../assets/css/PickupCancellationModal.css";
+import { Link } from "react-router-dom";
 
 function PickupOrderCancelled({ show, handleClose }) {
-  const [selectedReason, setSelectedReason] = useState("");
-
-  const handleReasonSelect = (reason) => {
-    setSelectedReason(reason);
-  };
 
   const handleSaveChanges = () => {
     // Implement save changes logic here, if needed
@@ -38,7 +32,7 @@ function PickupOrderCancelled({ show, handleClose }) {
         </Modal.Body>
         <Modal.Footer>
            <div>
-              <button className="cancellationModal-SubmitBtn">Ok</button>
+              <Link to="/pickup-ordertracking" className="cancellationModal-SubmitBtn">Ok</Link>
            </div>
         </Modal.Footer>
       </Modal>

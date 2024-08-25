@@ -13,11 +13,15 @@ import DateAndTimePicker from "../../commonComponents/PickupHomeDateTimePicker";
 import Info from "../../assets/images/info.png";
 import Bicycle from "../../assets/images/Bicycle.png";
 import Scooter from "../../assets/images/Scooter.png";
+import Car from "../../assets/images/Car.png";
+import Partner from "../../assets/images/Partner.png";
 import Van from "../../assets/images/Van.png";
 import Pickup from "../../assets/images/Pickup.png";
 import Truck from "../../assets/images/Truck.png";
-import Package from "../../assets/images/Package.png";
+import Other from "../../assets/images/Package.png";
 import PickupVehicleDimensionsModal from "../pickupAndDropOff/PickupVehicleDimensionsModal";
+import PickupHeader from "./PickupSettings/PickupHeader";
+import { Link } from "react-router-dom";
 
 const vehicles = [
   {
@@ -26,16 +30,36 @@ const vehicles = [
     capacity: "5 liters",
     className: "Pickup-Bicycle",
     price: "€5/km",
-    length: "5 Feet",
-    height: "4 Feet",
-    width: "1 Feet",
+    length: "0 Feet",
+    height: "0 Feet",
+    width: "0 Feet",
   },
   {
     image: Scooter,
     name: "Scooter",
     capacity: "10 liters",
     className: "Pickup-Scooter",
-    price: "€5/km",
+    price: "€10/km",
+    length: "5 Feet",
+    height: "4 Feet",
+    width: "1 Feet",
+  },
+  {
+    image: Car,
+    name: "Car",
+    capacity: "10 liters",
+    className: "Pickup-Car",
+    price: "€15/km",
+    length: "5 Feet",
+    height: "4 Feet",
+    width: "1 Feet",
+  },
+  {
+    image: Partner,
+    name: "Partner",
+    capacity: "10 liters",
+    className: "Pickup-Partner",
+    price: "€20/km",
     length: "5 Feet",
     height: "4 Feet",
     width: "1 Feet",
@@ -45,7 +69,7 @@ const vehicles = [
     name: "Van",
     capacity: "10 liters",
     className: "Pickup-Van",
-    price: "€5/km",
+    price: "€25/km",
     length: "5 Feet",
     height: "4 Feet",
     width: "1 Feet",
@@ -55,7 +79,7 @@ const vehicles = [
     name: "Pickup",
     capacity: "10 liters",
     className: "Pickup-Pickup",
-    price: "€5/km",
+    price: "€30/km",
     length: "5 Feet",
     height: "4 Feet",
     width: "1 Feet",
@@ -65,32 +89,37 @@ const vehicles = [
     name: "Truck",
     capacity: "10 liters",
     className: "Pickup-Truck",
-    price: "€5/km",
+    price: "€35/km",
     length: "5 Feet",
     height: "4 Feet",
     width: "1 Feet",
   },
   {
-    image: Package,
-    name: "Package",
+    image: Other,
+    name: "Other",
     capacity: "10 liters",
     className: "Pickup-Package",
-    price: "€5/km",
-    length: "5 Feet",
-    height: "4 Feet",
+    price: "€50/km",
+    length: "1 Feet",
+    height: "1 Feet",
     width: "1 Feet",
   },
 ];
 
 const PickupHome = () => {
   const [showModal, setShowModal] = useState(false);
+  const [selectedVehicle, setSelectedVehicle] = useState(null);
 
-  const openModal = () => {
+  const openModal = (vehicle) => {
+    setSelectedVehicle(vehicle);
     setShowModal(true);
   };
 
   return (
     <>
+      {/* Header Start Here  */}
+      <PickupHeader />
+      {/* Header End Here  */}
       <section className="request-pickup-sec">
         <div className="row manageRow">
           <div className="col-md-3">
@@ -150,12 +179,29 @@ const PickupHome = () => {
               </div>
 
               <div className="homePickupVehicleCard-main">
-                <p className="pickup-request-text">Choose the vehicle</p>
+                {/* Display Selected Vehicle Price */}
+
+                <div className="selected-vehicle-price-Card">
+                  <p className="pickup-request-text">Choose the vehicle</p>
+                  {selectedVehicle && (
+                    <p className="selected-vehicle-price-Text">
+                      {selectedVehicle.price}
+                    </p>
+                  )}
+                </div>
                 <div className="row">
                   {vehicles.map((vehicle, index) => (
                     <div key={index} className="col-md-4">
-                      <div className="homePickup-vehicles-card">
-                        <button className="pickupHome-InfoBtnIcon" onClick={openModal}>
+                      <div
+                        className={`homePickup-vehicles-card ${
+                          selectedVehicle === vehicle ? "selected" : ""
+                        }`}
+                        onClick={() => setSelectedVehicle(vehicle)}
+                      >
+                        <button
+                          className="pickupHome-InfoBtnIcon"
+                          onClick={() => openModal(vehicle)}
+                        >
                           <img
                             className="homePickup-info"
                             src={Info}
@@ -182,7 +228,7 @@ const PickupHome = () => {
               </div>
             </div>
             <div>
-              <a className="goTo-orderDetails" href="#">
+              <Link to="/add-pickup-details" className="goTo-orderDetails">
                 <p className="pickuphome-continueBt">
                   Continue to order details
                 </p>
@@ -190,7 +236,7 @@ const PickupHome = () => {
                   className="pickupHome-rightArrow-icon"
                   icon={faArrowRight}
                 />
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-md-9">
@@ -203,6 +249,7 @@ const PickupHome = () => {
         <PickupVehicleDimensionsModal
           show={showModal}
           handleClose={() => setShowModal(false)}
+          vehicle={selectedVehicle}
         />
       </section>
     </>

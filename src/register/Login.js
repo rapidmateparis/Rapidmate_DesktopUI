@@ -29,9 +29,8 @@ const Login = () => {
   return (
     <>
       <section className="login-section">
-
         <div className="row manageRow">
-          <div className="col-md-6">
+          <div className="col-md-5">
             <div className="login-main">
               <div>
                 <a className="logo-card" href="#">
@@ -107,12 +106,12 @@ const Login = () => {
               </div>
 
               <div className="register-card">
-                <p className="no-account">Don't have an account yet? <a className="register-text" href="#">Register</a></p>
+                <p className="no-account">Don't have an account yet? <Link to="/profile-choose" className="register-text" href="#">Register</Link></p>
               </div>
             </div>
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-7">
             <div>
               <img className="login-banner" src={Loginbanner} alt="banner" />
             </div>

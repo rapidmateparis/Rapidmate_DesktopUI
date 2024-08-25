@@ -28,7 +28,7 @@ const PickupNotificationSettings = () => {
       <div className="row">
         <div className="col-md-12">
           <div className="addressBook-addressCard">
-            <p className="addressBook-headerTitleText">Address book</p>
+            <p className="addressBook-headerTitleText">Notifications</p>
             <button className="addressBook-plusIconBtn">
               <FontAwesomeIcon icon={faPlus} />
             </button>

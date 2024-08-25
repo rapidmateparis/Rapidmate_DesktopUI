@@ -5,7 +5,7 @@ import DriverProfiles from "../../assets/images/DriverLoader-Profiles.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import PickupCancellationReasonModal from "./PickupCancellationReasonModal";
-import PickupOrderCancelled from "./PickupOrderCancelled";
+import PickupHeader from "./PickupSettings/PickupHeader";
 
 const PickupLookingForDriver = () => {
   const [showModal, setShowModal] = useState(false);
@@ -16,6 +16,9 @@ const PickupLookingForDriver = () => {
 
   return (
     <>
+      {/* Header Start Here  */}
+      <PickupHeader />
+      {/* Header End Here  */}
       <section className="lookingDriver-Section">
         <div className="container">
           <div className="row">
@@ -51,7 +54,7 @@ const PickupLookingForDriver = () => {
         </div>
 
         {/* ------------ Modal is Here -----------  */}
-        <PickupOrderCancelled
+        <PickupCancellationReasonModal
           show={showModal}
           handleClose={() => setShowModal(false)}
         />

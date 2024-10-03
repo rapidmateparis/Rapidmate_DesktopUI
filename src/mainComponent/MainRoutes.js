@@ -56,6 +56,7 @@ import EnterpriseHelp from "../components/Enterprise/EnterprisesSettings/Enterpr
 import EnterpriseManageCompanyLocations from "../components/Enterprise/EnterprisesSettings/EnterpriseManageCompanyLocations";
 import EnterpriseManageAds from "../components/Enterprise/EnterprisesSettings/EnterpriseManageAds";
 import EnterpriseNotification from "../components/Enterprise/EnterprisesSettings/EnterpriseNotification";
+import SignupVerification from "../register/SignupVerification";
 
 const MainRoutes = () => {
   return (
@@ -65,6 +66,7 @@ const MainRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/term-and-conditions" element={<TermAndConditions />} />
+      <Route path="/signup-verification" element={<SignupVerification />} />
       <Route
         path="/cancellation-and-refunds"
         element={<CancellationAndRefunds />}

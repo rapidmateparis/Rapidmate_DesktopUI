@@ -5211,3 +5211,51 @@ a {
   align-items: center;
   margin-left: auto;
 }
+
+/* Base styles for the custom radio button */
+.addPickup-detailRadioBtn input[type="radio"] {
+  display: none; /* Hide default radio button */
+}
+
+.addPickup-detailRadioBtn input[type="radio"] + .form-check-label {
+  position: relative;
+  padding-left: 30px; /* Adjust based on the size of the custom radio */
+  cursor: pointer;
+}
+
+.addPickup-detailRadioBtn input[type="radio"] + .form-check-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px; /* Adjust size */
+  height: 20px; /* Adjust size */
+  border: 2px solid var(--secondary-color); /* Default border color */
+  border-radius: 50%;
+  background-color: #fff;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.addPickup-detailRadioBtn input[type="radio"]:checked + .form-check-label::before {
+  background-color: var(--secondary-color); /* Primary color when selected */
+  border-color: var(--secondary-color);
+}
+
+.addPickup-detailRadioBtn input[type="radio"]:checked + .form-check-label {
+  color: var(--secondary-color); /* Change label color when selected */
+}
+
+.addPickup-detailRadioCard{
+  display: flex;
+  align-items: center;
+}
+
+.addPickup-detailRadioBtn{
+  padding-left: 0px !important;
+  padding-right: 40px;
+}
+
+.addPickup-detailFormCards{
+  margin-right: 20px;
+}

@@ -316,7 +316,7 @@ const EnterpriseSignup = () => {
 
                   <div>
                     <Link
-                      to="/enterprises-thankyou-signup"
+                      to="/signup-verification"
                       className="pickup-signup-continueBtn"
                       type="button"
                     >

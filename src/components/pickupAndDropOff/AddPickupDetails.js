@@ -18,7 +18,11 @@ const AddPickupDetails = () => {
           <div className="row manageRow">
             <div className="col-md-4">
               <div className="addpickupDetail-SidecardMain">
-                <img className="addpickupDetail-SidecardboxIcon" src={SidebarImg} alt="icon" />
+                <img
+                  className="addpickupDetail-SidecardboxIcon"
+                  src={SidebarImg}
+                  alt="icon"
+                />
               </div>
             </div>
             <div className="col-md-8">
@@ -33,9 +37,27 @@ const AddPickupDetails = () => {
                 </div>
                 <Form>
                   <div className="row manageRow">
+                    <div className="col-md-12">
+                      <div>
+                      <Form className="addPickup-detailRadioCard">
+                        {["Myself", "Other"].map((label, index) => (
+                          <div key={`radio-${index}`} className="mb-3">
+                            <Form.Check
+                              type="radio"
+                              id={`radio-${index}`}
+                              name="custom-radio-group" // Group the radio buttons
+                              label={label}
+                              className="addPickup-detailRadioBtn" // Apply the class name here
+                            />
+                          </div>
+                        ))}
+                      </Form>
+                      </div>
+                    </div>
+
                     <div className="col-md-6">
                       <Form.Group
-                        className="mb-1"
+                        className="mb-1 addPickup-detailFormCards"
                         controlId="exampleForm.ControlInput1"
                       >
                         <Form.Label className="addPickup-detailForm-Labels">
@@ -83,7 +105,7 @@ const AddPickupDetails = () => {
 
                     <div className="col-md-6">
                       <Form.Group
-                        className="mb-1"
+                        className="mb-1 addPickup-detailFormCards"
                         controlId="exampleForm.ControlInput1"
                       >
                         <Form.Label className="addPickup-detailForm-Labels">
@@ -144,7 +166,7 @@ const AddPickupDetails = () => {
 
                     <div className="col-md-6">
                       <Form.Group
-                        className="mb-1"
+                        className="mb-1 addPickup-detailFormCards"
                         controlId="exampleForm.ControlInput1"
                       >
                         <Form.Label className="addPickup-detailForm-Labels">
